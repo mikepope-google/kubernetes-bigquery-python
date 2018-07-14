@@ -17,7 +17,7 @@ template. Change or remove these items as needed.>
    - [Before you begin](#before-you-begin)
       - [GCP account and project](#gcp-account-and-project)
       - [Permissions](#permissions)
-      - [Licenses and modules <if required>](#licenses-and-modules-if-required)
+      - [Licenses and modules](#licenses-and-modules)
    - [Configure the GCP side](#configure-the-gcp-side)
       - [Initial tasks](#initial-tasks)
          - [Select a GCP project name](#select-a-gcp-project-name)
@@ -163,7 +163,7 @@ permissions. For details, see
 in the article
 [Creating a VPN Tunnel using Dynamic Routing](https://cloud.google.com/vpn/docs/how-to/creating-vpn-dynamic-routes).
 
-### Licenses and modules <if required>
+### Licenses and modules
 
 <This section is optional, because some VPN vendors can be open source or cloud
 providers that don't require licensing>
@@ -197,7 +197,7 @@ This section describes how to perform the tasks using the GCP Console. To see
 the `gcloud` commands for performing these tasks, see the
 [appendix](#appendix-using-gcloud-commands).
 
-### Initial tasks{#initial-tasks}
+### Initial tasks
 
 Complete the following procedures before configuring either a dynamic or static
 GCP VPN gateway and tunnel.
@@ -229,7 +229,7 @@ GCP VPN gateway and tunnel.
 1. Click **Create**. You're returned to the **VPC networks** page, where it
    takes about a minute for this network and its subnet to appear.
 
-#### Create the GCP external IP address{#create-the-gcp-external-ip-address}
+#### Create the GCP external IP address
 
 1.  In the GCP Console,
    [go to the External IP addresses page](https://pantheon.corp.google.com/networking/addresses/list).
@@ -250,7 +250,7 @@ GCP VPN gateway and tunnel.
 1. Make a note of the IP address that is created so that you can use it to
    configure the VPN gateway later.
 
-### Configuring an IPsec VPN using dynamic routing{#configuring-an-ipsec-vpn-using-dynamic-routing}
+### Configuring an IPsec VPN using dynamic routing
 
 For dynamic routing, you use
 [Cloud Router](https://cloud.google.com/router/docs/concepts/overview)
@@ -265,7 +265,7 @@ the VPC network and subnet, IP address, and so on. Each time you assign a name,
 make a note of it, because you often need to use those names in later
 procedures.
 
-#### Configure the VPN gateway{#configure-the-vpn-gateway}
+#### Configure the VPN gateway
 
 1. In the GCP Console, 
    [go to the VPN page](https://console.cloud.google.com/networking/vpn/list).
@@ -371,7 +371,7 @@ firewall to allow inbound traffic from your VPC subnet prefixes.
 
 1. Click **Create**.
 
-### Configuring route-based IPsec VPN using static routing{#configuring-route-based-ipsec-vpn-using-static-routing}
+### Configuring route-based IPsec VPN using static routing
 
 This section covers the steps for creating a GCP IPsec VPN using static routing.
 Both route-based Cloud VPN and policy-based Cloud VPN use static routing.  For
@@ -689,7 +689,7 @@ from a Cisco ASR router to GCP.>
     !!!!!
     Success rate is 100 percent (5/5), round-trip min/avg/max = 18/19/20 ms
 
-## Advanced VPN configurations{#advanced-vpn-configurations}
+## Advanced VPN configurations
 
 This section covers how to configure redundant on-premises VPN gateways and how
 to get higher throughput through VPN tunnels.
@@ -928,8 +928,7 @@ the following guides:
 -  <guide name>
 -  <guide name>
 
-
-## Appendix: Using gcloud commands{#appendix-using-gcloud-commands}
+## Appendix: Using gcloud commands
 
 The instructions in this guide focus on using the GCP Console. However, you can
 perform many of the tasks for the GPC side of the VPN configuration by using the
@@ -1113,7 +1112,7 @@ protocol</a>, port 500</td>
 </tbody>
 </table>
 
-### Setting environment variables for gcloud command parameters{#setting-env-variables}
+### Setting environment variables for gcloud command parameters
 
 To make it easier to run `gcloud` commands that contain parameters, you can
 create environment variables to hold the values you need, such as your project
@@ -1158,7 +1157,7 @@ earlier in this guide.
 
 **Note**: Before you run the `gcloud` commands in this section, make sure that
 you've set the variables as described earlier under
-[Setting environment variables for gcloud command parameters](#setting-env-variables).
+[Setting environment variables for gcloud command parameters](#setting-environment-variables-for-gcloud-command-parameters).
 
 1. Create a custom VPC network.
 
@@ -1372,7 +1371,7 @@ in the Cloud VPN documentation.
 
 **Note**: Before you run the `gcloud` commands in this section, make sure that
 you've set the variables as described earlier under
-[Setting environment variables for gcloud command parameters](#setting-env-variables).
+[Setting environment variables for gcloud command parameters](#setting-environment-variables-for-gcloud-command-parameters).
 
 1. Create a custom VPC network. Make sure there is no conflict with your
    local network IP address range. Note the following:
