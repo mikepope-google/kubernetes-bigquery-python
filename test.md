@@ -104,7 +104,7 @@ explanation.>
 -  <<vendor-name><product-name> term>
 -  <<vendor-name><product-name> term>
 
-## Topology{#topology}
+## Topology
 
 Cloud VPN supports the following topologies:
 
